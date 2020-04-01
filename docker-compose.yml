@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.7.26
+    container_name: mysql
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_DATABASE: spinandwin
+      MYSQL_ROOT_PASSWORD: JBEsJh@pb^wXm9QJ
