@@ -6,16 +6,16 @@
 #
 default: &default
   adapter: mysql2
-  database: spinandwin
-  host: localhost
-  username: root
-  password: root
+  database: <%= ENV['SAW_DB_NAME'] %>
+  host: <%= ENV['SAW_DB_HOST'] %>
+  username: <%= ENV['SAW_DB_USER'] %>
+  password: <%= ENV['SAW_DB_PASSWORD'] %>
   pool: 5
   timeout: 5000
 
 development:
   <<: *default
-  database: spinandwin
+  # database: <%= ENV['SAW_DB_NAME'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -26,4 +26,4 @@ test:
 
 production:
   <<: *default
-  database: spinandwin
+  # database: spinandwin
