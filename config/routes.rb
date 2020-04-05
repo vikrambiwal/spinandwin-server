@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post "login" => "authentication#login"
 
   post "coins" => "coins#add_coins"
-  get "coins" => "coins#get_coins"
+  post "all_coins" => "coins#get_coins"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
